@@ -1,17 +1,8 @@
 <div id="header">
     <nav class="navbar">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <div class="nav navbar-nav d-sm-none">
-                    <div class="header-search-mobile text-center">
-                        <form>
-                            <input class="input-mobile" placeholder="Search here">
-                            <button class="search-btn"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -21,7 +12,15 @@
                 <a class="navbar-brand pt-sm-4 pt-xs-0" href="#">
                     <img src="{{ asset('assets') }}/img/Logo-Ontribusi.png" alt="" width="35">
                 </a>
+            </div>
 
+            <div class="nav navbar-nav d-sm-none">
+                <div class="header-search-mobile text-center">
+                    <form>
+                        <input class="input-mobile" placeholder="Search here">
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -89,7 +88,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="nav navbar-nav w-50">
+                    <div class="nav navbar-nav w-55">
                         <div class="header-search text-center">
                             <form>
                                 <input class="input" placeholder="Search here">
@@ -98,7 +97,7 @@
                         </div>
                     </div>
                     <!-- </form> -->
-                    <div class="nav navbar-nav pt-4">
+                    <div class="nav navbar-nav navbar-right pt-4">
                         <button class="btn btn-danger mr-5">Laporkan <i class="fa fa-plus-circle"></i></button>
                         <button class="btn btn-outline-light">Masuk </button>
                         <button class="btn btn-light">Daftar </button>

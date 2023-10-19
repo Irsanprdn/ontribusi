@@ -1,5 +1,5 @@
 <div id="top-header">
-    <div class="container">
+    <div class="container-fluid">
         <!-- <ul class="header-links pull-left">
                     <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
                     <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>

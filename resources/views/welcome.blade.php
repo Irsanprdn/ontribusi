@@ -44,7 +44,7 @@
 
 <body>
     <!-- HEADER -->
-    <header>
+    <header class="position-fixed">
         <!-- TOP HEADER -->
         @include('layout.navbar-menu')
         <!-- /TOP HEADER -->
@@ -55,135 +55,236 @@
     </header>
     <!-- /HEADER -->
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
-                <!-- IKLAN -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <!-- CONTENT -->
+            <div class="main-carousel">
+                @include('layout.carousel')
             </div>
-            <div class="col-md-8">
-                <!-- CONTENT -->
-                <div class="main-carousel">
-                    @include('layout.carousel')
+            <!-- CONTENT -->
+            <div class="content">
+
+
+                <div class="row">
+                    <div class="col-md-6 my-3">
+                        <button class="w-webkit-fill-available btn btn-danger btn-lg" onclick="filterTab(this)" href="#tab1">Telah Hilang</button>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <button class="w-webkit-fill-available btn btn-success btn-lg" onclick="filterTab(this)" href="#tab2">Telah Ditemukan</button>
+                    </div>
+                    <!-- <div class="col-md-3 my-3">
+                        <button class="w-webkit-fill-available btn btn-warning btn-lg" onclick="filterTab(this)" href="#tab3">Prioritas</button>
+                    </div>
+                    <div class="col-md-3 my-3">
+                        <button class="w-webkit-fill-available btn btn-primary btn-lg" onclick="filterTab(this)" href="#tab4">Mitra Resmi</button>
+                    </div> -->
                 </div>
-                <!-- MAIN CONTENT -->
-                <div class="main-content">
 
+                <div class="swiper product-swiper tab-pane active" id="tab1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-danger">Telah Hilang</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
 
-                    <div class="row">
-                        <div class="col-md-3 my-3">
-                            <button class="w-webkit-fill-available btn btn-danger btn-lg" onclick="filterTab(this)" href="#tab1">Telah Hilang</button>
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3 my-3">
-                            <button class="w-webkit-fill-available btn btn-success btn-lg" onclick="filterTab(this)" href="#tab2">Telah Ditemukan</button>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-danger">Telah Hilang</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3 my-3">
-                            <button class="w-webkit-fill-available btn btn-warning btn-lg" onclick="filterTab(this)" href="#tab3">Prioritas</button>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-danger">Telah Hilang</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3 my-3">
-                            <button class="w-webkit-fill-available btn btn-primary btn-lg" onclick="filterTab(this)" href="#tab4">Mitra Resmi</button>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-danger">Telah Hilang</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-danger">Telah Hilang</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" id="btn-prev-swiper"></div>
+                    <div class="swiper-button-next" id="btn-next-swiper"></div>
+                </div>
 
-                    <div class="swiper product-swiper tab-pane active" id="tab1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <p class="product-category btn-danger">Telah Hilang</p>
-                                    <div class="product-img">
-                                        <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
-                                        <!-- <div class="product-label">
+                <div class="swiper product-swiper tab-pane" id="tab2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-success">Telah Ditemukan</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                    <!-- <div class="product-label">
                                             <span class="sale">-30%</span>
                                             <span class="new">NEW</span>
                                         </div> -->
-                                    </div>
-                                    <div class="product-body">
-
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                        <p class="product-address">Tangerang,Banten</p>
-                                        <p class="product-address">18 Oktober 2023</p>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <p class="product-category btn-danger">Telah Hilang</p>
-                                    <div class="product-img">
-                                        <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
-                                        <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                    </div>
-                                    <div class="product-body">
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                        <p class="product-address">Tangerang,Banten</p>
-                                        <p class="product-address">18 Oktober 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <p class="product-category btn-danger">Telah Hilang</p>
-                                    <div class="product-img">
-                                        <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
-                                        <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                    </div>
-                                    <div class="product-body">
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                        <p class="product-address">Tangerang,Banten</p>
-                                        <p class="product-address">18 Oktober 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <p class="product-category btn-danger">Telah Hilang</p>
-                                    <div class="product-img">
-                                        <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
-                                        <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                    </div>
-                                    <div class="product-body">
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                        <p class="product-address">Tangerang,Banten</p>
-                                        <p class="product-address">18 Oktober 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <p class="product-category btn-danger">Telah Hilang</p>
-                                    <div class="product-img">
-                                        <img src="{{asset('assets')}}/img/product01.png" alt="" width="50">
-                                        <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                    </div>
-                                    <div class="product-body">
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                        <p class="product-address">Tangerang,Banten</p>
-                                        <p class="product-address">18 Oktober 2023</p>
-                                    </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev" id="btn-prev-swiper"></div>
-                        <div class="swiper-button-next" id="btn-next-swiper"></div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-success">Telah Ditemukan</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-success">Telah Ditemukan</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-success">Telah Ditemukan</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-address">18 Oktober 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <p class="product-category btn-success">Telah Ditemukan</p>
+                                <div class="product-img">
+                                    <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                    <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                    <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                    <p class="product-address">Tangerang,Banten</p>
+                                    <p class="product-date">18 Oktober 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" id="btn-prev-swiper"></div>
+                    <div class="swiper-button-next" id="btn-next-swiper"></div>
+                </div>
+
+
+                <div class="rekomendasi">
+                    <div class="d-flex mt-5">
+                        <h1 class="mr-4">Rekomendasi</h1>
+                        <a href="#" class="cursor-pointer mt-3 text-primary font-size-15 font-weight-700">Lihat Semua</a>
                     </div>
 
-                    <div class="swiper product-swiper tab-pane" id="tab2">
+                    <div class="swiper product-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="product">
@@ -280,228 +381,121 @@
                         <div class="swiper-button-prev" id="btn-prev-swiper"></div>
                         <div class="swiper-button-next" id="btn-next-swiper"></div>
                     </div>
-
-
-                    <div class="rekomendasi">
-                        <div class="d-flex mt-5">
-                            <h1 class="mr-4">Rekomendasi</h1>
-                            <a href="#" class="cursor-pointer mt-3 text-primary font-size-15 font-weight-700">Lihat Semua</a>
-                        </div>
-
-                        <div class="swiper product-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-date">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev" id="btn-prev-swiper"></div>
-                            <div class="swiper-button-next" id="btn-next-swiper"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="kategori-campuran">
-                        <div class="d-flex mt-5">
-                            <h1 class="mr-4">Kategori Campuran</h1>
-                            <a href="#" class="cursor-pointer mt-3 text-primary font-size-15 font-weight-700">Lihat Semua</a>
-                        </div>
-
-                        <div class="swiper product-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-address">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="product">
-                                        <p class="product-category btn-success">Telah Ditemukan</p>
-                                        <div class="product-img">
-                                            <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
-                                            <!-- <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div> -->
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <p class="product-desc">Penjelasan dari produk tersebut</p>
-                                            <p class="product-address">Tangerang,Banten</p>
-                                            <p class="product-date">18 Oktober 2023</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev" id="btn-prev-swiper"></div>
-                            <div class="swiper-button-next" id="btn-next-swiper"></div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- END MAIN CONTENT -->
+
+                <div class="kategori-campuran">
+                    <div class="d-flex mt-5">
+                        <h1 class="mr-4">Kategori Campuran</h1>
+                        <a href="#" class="cursor-pointer mt-3 text-primary font-size-15 font-weight-700">Lihat Semua</a>
+                    </div>
+
+                    <div class="swiper product-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <p class="product-category btn-success">Telah Ditemukan</p>
+                                    <div class="product-img">
+                                        <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                        <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                    </div>
+                                    <div class="product-body">
+                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                        <p class="product-address">Tangerang,Banten</p>
+                                        <p class="product-address">18 Oktober 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <p class="product-category btn-success">Telah Ditemukan</p>
+                                    <div class="product-img">
+                                        <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                        <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                    </div>
+                                    <div class="product-body">
+                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                        <p class="product-address">Tangerang,Banten</p>
+                                        <p class="product-address">18 Oktober 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <p class="product-category btn-success">Telah Ditemukan</p>
+                                    <div class="product-img">
+                                        <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                        <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                    </div>
+                                    <div class="product-body">
+                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                        <p class="product-address">Tangerang,Banten</p>
+                                        <p class="product-address">18 Oktober 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <p class="product-category btn-success">Telah Ditemukan</p>
+                                    <div class="product-img">
+                                        <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                        <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                    </div>
+                                    <div class="product-body">
+                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                        <p class="product-address">Tangerang,Banten</p>
+                                        <p class="product-address">18 Oktober 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <p class="product-category btn-success">Telah Ditemukan</p>
+                                    <div class="product-img">
+                                        <img src="{{asset('assets')}}/img/product02.png" alt="" width="50">
+                                        <!-- <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div> -->
+                                    </div>
+                                    <div class="product-body">
+                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
+                                        <p class="product-desc">Penjelasan dari produk tersebut</p>
+                                        <p class="product-address">Tangerang,Banten</p>
+                                        <p class="product-date">18 Oktober 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev" id="btn-prev-swiper"></div>
+                        <div class="swiper-button-next" id="btn-next-swiper"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2">
-                <!-- IKLAN -->
-            </div>
-        </div>
+
+            <!-- END CONTENT -->
+        </div>    
     </div>
 
+    <!-- FOOTER -->
+    @include('layout.footer')
     <!-- /FOOTER -->
 
     <!-- jQuery Plugins -->
